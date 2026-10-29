@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+  <script src="js/jquery.js" defer async></script>
+  <script src="js/app.js" defer async></script>
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="css/app.css">
+  <title>CSS Grid Sample</title>
+</head>
+<body id="home">
+  <a href="#home" title="home" onclick="closeMenu();">
+    <img id="logo" src="assets/images/logo.png" alt="My Logo">
+  </a>
+  <div id="hamburger" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <nav>
+    <a href="#about" title="about" onclick="closeMenu();">about</a><br>
+    <a href="#skills" title="skills" onclick="closeMenu();">skills</a><br>
+    <a href="#work" title="work" onclick="closeMenu();">work</a><br>
+    <a href="#contact" title="contact" onclick="closeMenu();">contact</a>
+  </nav>
+  <div id="grid">
+    <header></header>
+    <div id="about">
+      <img id="me" src="assets/images/me.png" alt="Me">
+      <h1>Dakuma</h1>
+      <p>Dakuma is an experienced technology instructor, developer, and creative professional with a strong background in web development, programming, graphic design, and mobile application development.</p>
+      <p>Outside the classroom, Dakuma is also a music producer who releases music under the name Dakuma. His work blends elements of EDM, trance, pop, disco, and soulful electronic music.</p>
+    </div>
+    <div id="skills">
+      <div class="skillIcon">
+        <i class="devicon-android-plain"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-react-original"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-html5-plain"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-css3-plain"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-apple-original"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-ruby-plain"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-php-plain"></i>
+      </div>
+      <div class="skillIcon">
+        <i class="devicon-javascript-plain"></i>
+      </div>
+    </div>
+    <div id="work">
+      <div class="card">
+        <img src="assets/images/site1.png" alt="Site 1">
+        <p>My current portfolio site. <a href="https://www.michaellewis.ca" title="My Site" target="_blank">click here</a></p>
+        
+      </div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+    <div id="contact">
+      <section class="contactSection">
+        <h2>Contact Me</h2>
+        <form class="contactForm">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What would you like to discuss?" required>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <a href="#about" title="about" onclick="closeMenu();">about</a><br>
+        <a href="#skills" title="skills" onclick="closeMenu();">skills</a><br>
+        <a href="#work" title="work" onclick="closeMenu();">work</a><br>
+        <a href="#contact" title="contact" onclick="closeMenu();">contact</a>
+      </div>
+      <div>
+        &copy; 2026 Dakuma, all rights reserved.
+      </div>
+      <div>
+        <a href="#about" title="about" onclick="closeMenu();">about</a><br>
+        <a href="#skills" title="skills" onclick="closeMenu();">skills</a><br>
+        <a href="#work" title="work" onclick="closeMenu();">work</a><br>
+        <a href="#contact" title="contact" onclick="closeMenu();">contact</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

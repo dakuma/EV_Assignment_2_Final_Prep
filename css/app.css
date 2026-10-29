@@ -1,0 +1,281 @@
+
+@font-face {
+    font-family: 'blue_water';
+    src: url('../assets/fonts/blue_water-webfont.woff2') format('woff2'),
+         url('../assets/fonts/blue_water-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: #000;
+  color: #fff;
+  font-size: 1.6em;
+}
+#logo {
+  width: 120px;
+  position: fixed;
+  z-index: 13;
+  top: 25px;
+  left: 33px;
+}
+#hamburger {
+  width: 80px;
+  height: 70px;
+  position: fixed;
+  z-index: 33;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+  .bar {
+    width: 80px;
+    height: 16px;
+    margin: 4px 0;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #787878;
+  }
+nav {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  z-index: 21;
+  background: #ccc;
+  border-left: 1px solid #000;
+  top: 0;
+  right: -300px;
+  padding-left: 33px;
+  font-size: 1.6em;
+  font-family: "Fascinate", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 120px;
+}
+  a {
+    text-decoration: none;
+    color: #444;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #f00;
+  }
+
+/*========================*/
+/*====== GRID CODE ======*/
+#grid {
+  display: grid;
+  width: 100%;
+  gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  grid-template-areas: 
+    "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr"
+    "abt abt abt wrk wrk wrk wrk wrk wrk wrk wrk wrk"
+    "skl skl skl skl skl skl skl skl skl skl skl skl"
+    "con con con con con con con con con con con con"
+    "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+}
+header {
+  display: grid;
+  grid-area: hdr;
+  width: 100%;
+  height: 700px;
+  background: url('../assets/images/headerBkg3.png');
+  background-size: cover;
+}
+#about {
+  display: grid;
+  grid-area: abt;
+  width: 100%;
+  background: #444;
+  border-bottom: 1px solid #222;
+  padding: 20px 35px;
+}
+  #about > p {
+    margin: 10px 0;
+  }
+  #about > h1 {
+    color: #00b1fd;
+    font-family: 'blue_water';
+  }
+  #me {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px #000;
+  }
+#skills {
+  display: grid;
+  grid-area: skl;
+  width: 100%;
+  background: #aaa;
+  border-bottom: 1px solid #222;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 35px;
+}
+  .skillIcon {
+    width: 96px;
+    height: 96px;
+    margin: 50px auto;
+  }
+    .skillIcon > i {
+      font-size: 4.2em;
+    }
+#work {
+  display: grid;
+  grid-area: wrk;
+  width: 100%;
+  background: #bb8;
+  border-bottom: 1px solid #222;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 35px;
+}
+  .card {
+    width: 80%;
+    max-width: 640px;
+    min-height: 440px;
+    background: linear-gradient(to bottom, #999, #ccc);
+    border: 4px solid #fff;
+    border-radius: 16px;
+    box-shadow: 3px 3px 7px #111;
+    margin: 25px auto;
+    color: #fff;
+  }
+    .card > img {
+      width: 100%;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom: 1px solid #333;
+    }
+    .card > p {
+      margin: 10px 0;
+      margin-left: 25px;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+#contact {
+  display: grid;
+  grid-area: con;
+  color: #333;
+  width: 100%;
+  background: #0066cc;
+  border-bottom: 1px solid #222;
+}
+  .contactSection {
+    width: 90%;
+    max-width: 650px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: Arial, sans-serif;
+  }
+  .contactSection h2 {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .contactForm label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  .contactForm textarea {
+    resize: vertical;
+  }
+  .contactForm input:focus,
+  .contactForm textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+  }
+  .contactForm button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .contactForm button:hover {
+    background: #004f9e;
+  }
+footer {
+  display: grid;
+  grid-area: ftr;
+  width: 100%;
+  background: #0ff;
+  border-bottom: 1px solid #222;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+  footer > div {
+    padding: 15px 30px;
+  }
+  footer > div:nth-child(2) {
+    text-align: center;
+    background: #000;
+  }
+  footer > div:last-child {
+    text-align: right;
+  }
+
+/*=========== MEDIA QUERIES ===========*/
+@media screen and (max-width: 1440px) {
+  #grid {
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 0;
+    grid-template-areas: 
+      "hdr hdr hdr hdr hdr hdr hdr hdr"
+      "abt abt abt abt abt abt abt abt"
+      "wrk wrk wrk wrk skl skl skl skl"
+      "con con con con con con con con"
+      "ftr ftr ftr ftr ftr ftr ftr ftr";
+  }
+  #me {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #work {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 960px) {
+  #grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 0;
+    grid-template-areas: 
+      "hdr hdr hdr hdr hdr hdr"
+      "abt abt abt abt abt abt"
+      "wrk wrk wrk wrk wrk wrk"
+      "skl skl skl skl skl skl"
+      "con con con con con con"
+      "ftr ftr ftr ftr ftr ftr";
+  }
+  #me {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
